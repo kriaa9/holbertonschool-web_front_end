@@ -348,7 +348,7 @@ template {
 [hidden] {
   display: none;
 }
-/* Task 31 */
+/* Task 30 */
 
 *,
 *::before,
@@ -398,6 +398,12 @@ html {
   --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-white);
   --section-tagline-margin: 0;
+  --header-padding: 4rem 0 0;
+  --header-logo-position: relative;
+  --header-logo-link-display: inline-block;
+  --header-logo-link-position: absolute;
+  --header-logo-link-top: -1rem;
+  --header-logo-link-left: 0;
 }
 
 body {
@@ -500,6 +506,21 @@ a[href]:active {
 
 .nav .nav-link:hover {
   color: var(--nav-item-link-hover);
+}
+
+.nav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  width: 0;
+  height: 20%;
+}
+
+.nav .nav-item:hover .nav-link::before {
+  background-color: var(--color-primary);
+  width: 100%;
 }
 
 ul.row {
@@ -644,21 +665,6 @@ h6 {
   left: var(--header-logo-link-left);
 }
 
-.nav .nav-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-white);
-  width: 0;
-  height: 20%;
-}
-
-.nav .nav-item:hover .nav-link::before {
-  background-color: var(--color-primary);
-  width: 100%;
-}
-
 .card-work .card-outer {
   position: relative;
   overflow: hidden;
@@ -722,82 +728,4 @@ h6 {
   color: #efeded;
   font-size: 10rem;
   z-index: -1;
-}
-
-[data-section-theme="dark"] {
-  --text-color: var(--color-white);
-  --section-title-color: var(--color-white);
-  --button-color: var(--color-white);
-  background-color: var(--color-black);
-}
-
-.footer-address {
-  color: var(--text-color);
-}
-
-.social-link {
-  display: block;
-}
-
-.social-link > svg {
-  fill: var(--text-color);
-}
-
-.card-services .card-title {
-  margin: 0;
-}
-
-.card-services a {
-  display: block;
-  padding: 2rem;
-  background-color: var(--color-light-grey);
-}
-
-.card-services a:hover {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  text-decoration: none;
-}
-
-.button {
-  display: var(--button-display);
-  padding: var(--button-padding);
-  border: var(--button-border);
-  font-size: var(--button-font-size);
-  color: var(--button-color);
-  text-decoration: var(--button-text-decoration);
-}
-
-.button:hover {
-  color: var(--button-hover-color);
-  text-decoration: var(--button-hover-text-decoration);
-  background: var(--button-hover-background);
-}
-
-.card-testimonial {
-  text-align: center;
-}
-
-.card-testimonial .card-avatar {
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-}
-
-.card-testimonial .card-quote cite {
-  display: block;
-  padding-top: 1rem;
-  color: var(--color-primary);
-}
-
-.section-hero {
-  background-size: 90rem auto;
-}
-
-.section-hero .section-title {
-  margin-bottom: 5rem;
-}
-
-.section-hero .section-inner {
-  padding: 10rem 40rem 2rem 0;
 }
