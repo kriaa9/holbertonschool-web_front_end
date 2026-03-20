@@ -347,7 +347,7 @@ template {
 [hidden] {
   display: none;
 }
-/* Task 18: Customizing the navbar */
+/* Task 20: Clear the context of the grid */
 
 *,
 *::before,
@@ -396,6 +396,7 @@ html {
   --nav-item-display: inline-block;
   --nav-item-margin: 3rem 0 0 0;
   --nav-item-link-hover: var(--color-primary);
+  --section-tagline-margin: 0;
 }
 
 body {
@@ -462,6 +463,7 @@ a[href]:active {
   color: var(--color-primary);
   text-transform: var(--section-tagline-transform);
   font-weight: var(--font-weight-bold);
+  margin: var(--section-tagline-margin);
 }
 
 .container {
@@ -497,6 +499,40 @@ a[href]:active {
 
 .nav .nav-link:hover {
   color: var(--nav-item-link-hover);
+}
+
+ul.row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.col-1-3 {
+  width: 33.33%;
+  float: left;
+  padding: 0.5rem;
+}
+
+.col-1-2 {
+  width: 50%;
+  float: left;
+  padding: 0.5rem;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+}
+
+.footer ul {
+  text-align: right;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h1,
