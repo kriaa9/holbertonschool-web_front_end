@@ -347,7 +347,13 @@ template {
 [hidden] {
   display: none;
 }
-/* Task 13: Pseudo Classes */
+/* Task 15: Add universal box-sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;

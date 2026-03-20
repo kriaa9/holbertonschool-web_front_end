@@ -347,7 +347,13 @@ template {
 [hidden] {
   display: none;
 }
-/* Task 13: Pseudo Classes */
+/* Task 16: Styling the container */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -429,6 +435,12 @@ a[href]:active {
   color: var(--color-primary);
   text-transform: var(--section-tagline-transform);
   font-weight: var(--font-weight-bold);
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
