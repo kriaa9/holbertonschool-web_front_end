@@ -579,7 +579,7 @@ h6 {
   --text-color: var(--color-white);
   --section-title-color: var(--color-white);
   --button-color: var(--color-white);
-  background-color: var(--color-black);
+  background: var(--color-black);
 }
 
 .footer-address {
@@ -590,7 +590,7 @@ h6 {
   display: block;
 }
 
-.social-link > svg {
+.social-link svg {
   fill: var(--text-color);
 }
 
