@@ -347,7 +347,13 @@ template {
 [hidden] {
   display: none;
 }
-/* Task 13: Pseudo Classes */
+/* Task 17: Adding padding to sections */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -377,6 +383,12 @@ html {
   --section-tagline-transform: uppercase;
   --section-title-margin: 0;
   --section-title-color: var(--color-black);
+  --section-padding: 5rem 0;
+  --section-header-padding: 0 0 3rem;
+  --section-body-padding: 0 0 3rem;
+  --section-footer-padding: 3rem 0 0;
+  --section-footer-align: center;
+  --footer-padding: 5rem 0 1rem;
 }
 
 body {
@@ -412,8 +424,22 @@ a[href]:active {
   color: var(--color-primary);
 }
 
+.section {
+  padding: var(--section-padding);
+}
+
 .section-header {
+  padding: var(--section-header-padding);
   text-align: var(--section-header-align);
+}
+
+.section-body {
+  padding: var(--section-body-padding);
+}
+
+.section-footer {
+  padding: var(--section-footer-padding);
+  text-align: var(--section-footer-align);
 }
 
 .section-title {
@@ -431,6 +457,12 @@ a[href]:active {
   font-weight: var(--font-weight-bold);
 }
 
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1,
 h2,
 h3,
@@ -439,4 +471,8 @@ h5,
 h6 {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
+}
+
+.footer {
+  padding: var(--footer-padding);
 }
